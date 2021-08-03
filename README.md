@@ -1,13 +1,12 @@
 # Salamis
 
-Salamis is a turn-based strategy game for 2 players, which goal is to destroy all ships of the other player. The game is currently largely text-based, awaiting an API to be implemented. 
+Salamis is a turn-based strategy game for 2 players, which goal is to destroy all ships of the other player. The game is currently largely text-based, awaiting for me to implement an API.
 
 ## Gameplay
 
-The game starts with 10 islands that are randomly placed (but such that the starting conditions are fairly balanced between the players) on a map. Each island is either onoccupied, or held by either of the players. Each island has a certain *value*, which is the number of ships received by the player holding the island, at the end of the turn. 
+The game starts with 10 islands that are randomly placed (but such that the starting conditions are balanced fairly between the players) on a map. Each island is either onoccupied, or held by either of the players. Occupying an island gives the player a bonus number of ships at the end of each round. The number of ships received at the end of the turn equals the *value* of the island.
 
 The two players (blue and red) each start with one island (with value 10) and 10 ships. From there they can send ships to conquer other islands. Onoccupied islands can be taken with a number a ships that exceeds the *value* of the island. So, for example, to take an onoccupied island of value 6, at least 7 ships need to arrive at the island. 
-
 
 Ships have a set but finite speed and thus take a certain number of turns to sail to other islands. Ships that are sailing can only be tracked by the player that owns those ships, while all stationary ships (i.e. after they have arrived at an island) can be seen by both players. Sailing plans can never be changed; boats will always continue their journey until their set destination.
 
